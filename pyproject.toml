@@ -1,0 +1,93 @@
+[project]
+name = "mlops-course"
+version = "0.1.0"
+description = "MLOps Course Project with Data Science, FastAPI, and ngrok"
+authors = [
+    { name = "Manuel Peixoto" }
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    # Data Science Core Libraries
+    "numpy>=1.24.0",
+    "pandas>=2.0.0",
+    "scipy>=1.10.0",
+
+    # Machine Learning
+    "scikit-learn>=1.3.0",
+    "xgboost>=1.7.0",
+    "lightgbm>=4.0.0",
+
+    # Deep Learning
+    "torch>=2.0.0",
+    "tensorflow>=2.13.0",
+
+    # Data Visualization
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "plotly>=5.15.0",
+
+    # Jupyter and Notebooks
+    "jupyter>=1.0.0",
+    "jupyterlab>=4.0.0",
+    "ipykernel>=6.25.0",
+    "ipywidgets>=8.1.0",
+
+    # Data Processing
+    "polars>=0.18.0",
+    "dask>=2023.7.0",
+    "pyarrow>=12.0.0",
+
+    # MLOps and Experiment Tracking
+    "mlflow>=2.5.0",
+    "wandb>=0.15.0",
+    "optuna>=3.3.0",
+
+    # FastAPI and Web Framework
+    "fastapi>=0.100.0",
+    "uvicorn[standard]>=0.23.0",
+    "pydantic>=2.0.0",
+    "python-multipart>=0.0.6",
+
+    # HTTP Requests
+    "httpx>=0.24.0",
+    "requests>=2.31.0",
+
+    # Database
+    "sqlalchemy>=2.0.0",
+    "alembic>=1.11.0",
+
+    # Utilities
+    "python-dotenv>=1.0.0",
+    "pyngrok>=7.0.0",
+    "click>=8.1.0",
+    "rich>=13.5.0",
+    "tqdm>=4.65.0",
+
+    # Testing
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.7.0",
+    "isort>=5.12.0",
+    "flake8>=6.0.0",
+    "mypy>=1.5.0",
+    "pre-commit>=3.3.0"
+]
+
+[tool.black]
+line-length = 88
+target-version = ["py39"]
+
+[tool.isort]
+profile = "black"
+multi_line_output = 3
+
+[tool.mypy]
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
